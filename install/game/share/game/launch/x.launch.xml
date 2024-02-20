@@ -1,0 +1,14 @@
+<!-- game_launch.xml -->
+<launch>
+    <node
+        pkg="game"
+        executable="aruco_detection"
+        name="aruco_detection"
+    />
+
+    <node
+        pkg="game"
+        executable="movements"
+        name="movements"
+    />
+</launch>
