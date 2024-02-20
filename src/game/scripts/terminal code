@@ -1,0 +1,1 @@
+terminator -e "bash -i -c 'sleep 3 && ros2 launch game run.launch.py'"
