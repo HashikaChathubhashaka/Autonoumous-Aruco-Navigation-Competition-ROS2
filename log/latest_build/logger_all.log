@@ -1,0 +1,141 @@
+[7.613s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[7.614s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff89bdcf40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8a0cad10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8a0cad10>>)
+[8.056s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[8.057s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[8.057s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[8.057s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[8.058s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[8.058s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[8.058s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/diyazen/hashika_ws'
+[8.058s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[8.059s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[8.059s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[8.059s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[8.060s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[8.060s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[8.060s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[8.060s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[8.060s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[8.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[8.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[8.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[8.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[8.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[8.149s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[8.149s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[8.150s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[8.150s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[8.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[8.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[8.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[8.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[8.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[8.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[8.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[8.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[8.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[8.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[8.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[8.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[8.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[8.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[8.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[8.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[8.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[8.155s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[8.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[8.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extensions ['ignore', 'ignore_ament_install']
+[8.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extension 'ignore'
+[8.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extension 'ignore_ament_install'
+[8.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extensions ['colcon_pkg']
+[8.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extension 'colcon_pkg'
+[8.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extensions ['colcon_meta']
+[8.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extension 'colcon_meta'
+[8.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extensions ['ros']
+[8.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/game) by extension 'ros'
+[8.172s] DEBUG:colcon.colcon_core.package_identification:Package 'src/game' with type 'ros.ament_python' and name 'game'
+[8.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[8.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[8.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[8.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[8.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[8.805s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[8.806s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[9.042s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/diyazen/upeksha_ws/install
+[9.140s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/diyazen/hashika_ws/install
+[9.250s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 324 installed packages in /opt/ros/humble
+[9.258s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[9.798s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'game' is in: /home/diyazen/hashika_ws/install/game
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding game
+
+This may be promoted to an error in a future release of colcon-override-check.
+[9.899s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'cmake_args' from command line to 'None'
+[9.899s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'cmake_target' from command line to 'None'
+[9.899s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[9.899s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'cmake_clean_cache' from command line to 'False'
+[9.899s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'cmake_clean_first' from command line to 'False'
+[9.899s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'cmake_force_configure' from command line to 'False'
+[9.900s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'ament_cmake_args' from command line to 'None'
+[9.900s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'catkin_cmake_args' from command line to 'None'
+[9.900s] Level 5:colcon.colcon_core.verb:set package 'game' build argument 'catkin_skip_building_tests' from command line to 'False'
+[9.900s] DEBUG:colcon.colcon_core.verb:Building package 'game' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/diyazen/hashika_ws/build/game', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/diyazen/hashika_ws/install/game', 'merge_install': False, 'path': '/home/diyazen/hashika_ws/src/game', 'symlink_install': True, 'test_result_base': None}
+[9.998s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[10.104s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[10.105s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/diyazen/hashika_ws/src/game' with build type 'ament_python'
+[10.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('game', 'ament_prefix_path')
+[10.248s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[10.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diyazen/hashika_ws/install/game/share/game/hook/ament_prefix_path.ps1'
+[10.254s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diyazen/hashika_ws/install/game/share/game/hook/ament_prefix_path.dsv'
+[10.259s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diyazen/hashika_ws/install/game/share/game/hook/ament_prefix_path.sh'
+[10.370s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.370s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.535s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/diyazen/hashika_ws/src/game'
+[12.642s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.643s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[15.278s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/diyazen/hashika_ws/build/game': PYTHONPATH=/home/diyazen/hashika_ws/build/game/prefix_override:/home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/diyazen/hashika_ws/build/game/build --no-deps install_data
+[18.376s] Level 1:colcon.colcon_core.shell:create_environment_hook('game', 'pythonpath_develop')
+[18.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/diyazen/hashika_ws/build/game' returned '0': PYTHONPATH=/home/diyazen/hashika_ws/build/game/prefix_override:/home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/diyazen/hashika_ws/build/game/build --no-deps install_data
+[18.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diyazen/hashika_ws/build/game/share/game/hook/pythonpath_develop.ps1'
+[18.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diyazen/hashika_ws/build/game/share/game/hook/pythonpath_develop.dsv'
+[18.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diyazen/hashika_ws/build/game/share/game/hook/pythonpath_develop.sh'
+[18.628s] Level 1:colcon.colcon_core.environment:checking '/home/diyazen/hashika_ws/install/game' for CMake module files
+[18.633s] Level 1:colcon.colcon_core.environment:checking '/home/diyazen/hashika_ws/install/game' for CMake config files
+[18.640s] Level 1:colcon.colcon_core.environment:checking '/home/diyazen/hashika_ws/install/game/lib'
+[18.642s] Level 1:colcon.colcon_core.environment:checking '/home/diyazen/hashika_ws/install/game/bin'
+[18.643s] Level 1:colcon.colcon_core.environment:checking '/home/diyazen/hashika_ws/install/game/lib/pkgconfig/game.pc'
+[18.644s] Level 1:colcon.colcon_core.environment:checking '/home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages'
+[18.645s] Level 1:colcon.colcon_core.shell:create_environment_hook('game', 'pythonpath')
+[18.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diyazen/hashika_ws/install/game/share/game/hook/pythonpath.ps1'
+[18.742s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/diyazen/hashika_ws/install/game/share/game/hook/pythonpath.dsv'
+[18.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/diyazen/hashika_ws/install/game/share/game/hook/pythonpath.sh'
+[18.749s] Level 1:colcon.colcon_core.environment:checking '/home/diyazen/hashika_ws/install/game/bin'
+[18.749s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(game)
+[18.848s] INFO:colcon.colcon_core.shell:Creating package script '/home/diyazen/hashika_ws/install/game/share/game/package.ps1'
+[18.854s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/diyazen/hashika_ws/install/game/share/game/package.dsv'
+[18.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/diyazen/hashika_ws/install/game/share/game/package.sh'
+[18.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/diyazen/hashika_ws/install/game/share/game/package.bash'
+[18.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/diyazen/hashika_ws/install/game/share/game/package.zsh'
+[18.876s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/diyazen/hashika_ws/install/game/share/colcon-core/packages/game)
+[18.877s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[18.879s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[18.879s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[18.880s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[19.015s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[19.017s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[19.018s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[19.086s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[19.186s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diyazen/hashika_ws/install/local_setup.ps1'
+[19.191s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diyazen/hashika_ws/install/_local_setup_util_ps1.py'
+[19.199s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diyazen/hashika_ws/install/setup.ps1'
+[19.308s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diyazen/hashika_ws/install/local_setup.sh'
+[19.320s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/diyazen/hashika_ws/install/_local_setup_util_sh.py'
+[19.328s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diyazen/hashika_ws/install/setup.sh'
+[19.438s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diyazen/hashika_ws/install/local_setup.bash'
+[19.444s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diyazen/hashika_ws/install/setup.bash'
+[19.551s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/diyazen/hashika_ws/install/local_setup.zsh'
+[19.555s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/diyazen/hashika_ws/install/setup.zsh'
