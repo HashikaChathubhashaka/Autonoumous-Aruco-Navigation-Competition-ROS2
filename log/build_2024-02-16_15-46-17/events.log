@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.001558] (game) JobQueued: {'identifier': 'game', 'dependencies': OrderedDict()}
+[0.001687] (game) JobStarted: {'identifier': 'game'}
+[0.099003] (-) TimerEvent: {}
+[0.199654] (-) TimerEvent: {}
+[0.300749] (-) TimerEvent: {}
+[0.401875] (-) TimerEvent: {}
+[0.503330] (-) TimerEvent: {}
+[0.604301] (-) TimerEvent: {}
+[0.705026] (-) TimerEvent: {}
+[0.805711] (-) TimerEvent: {}
+[0.906449] (-) TimerEvent: {}
+[1.007069] (-) TimerEvent: {}
+[1.107702] (-) TimerEvent: {}
+[1.208319] (-) TimerEvent: {}
+[1.308943] (-) TimerEvent: {}
+[1.409641] (-) TimerEvent: {}
+[1.510376] (-) TimerEvent: {}
+[1.610995] (-) TimerEvent: {}
+[1.711727] (-) TimerEvent: {}
+[1.812904] (-) TimerEvent: {}
+[1.914139] (-) TimerEvent: {}
+[2.015474] (-) TimerEvent: {}
+[2.116596] (-) TimerEvent: {}
+[2.217706] (-) TimerEvent: {}
+[2.318430] (-) TimerEvent: {}
+[2.419097] (-) TimerEvent: {}
+[2.519748] (-) TimerEvent: {}
+[2.620419] (-) TimerEvent: {}
+[2.721032] (-) TimerEvent: {}
+[2.821670] (-) TimerEvent: {}
+[2.922331] (-) TimerEvent: {}
+[3.022908] (-) TimerEvent: {}
+[3.123560] (-) TimerEvent: {}
+[3.224208] (-) TimerEvent: {}
+[3.324894] (-) TimerEvent: {}
+[3.425602] (-) TimerEvent: {}
+[3.526339] (-) TimerEvent: {}
+[3.627020] (-) TimerEvent: {}
+[3.727671] (-) TimerEvent: {}
+[3.828487] (-) TimerEvent: {}
+[3.910831] (game) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/diyazen/hashika_ws/build/game/build', '--no-deps', 'install_data'], 'cwd': '/home/diyazen/hashika_ws/build/game', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'diyazen', 'SSH_CLIENT': '192.168.8.209 49642 22', 'LC_TIME': 'si_LK', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/diyazen', 'OLDPWD': '/home/diyazen', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'si_LK', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/diyazen/upeksha_ws/install:/home/diyazen/hashika_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'diyazen', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/diyazen/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'si_LK', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0.0', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'si_LK', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '5', 'AMENT_PREFIX_PATH': '/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bumperbot_controller:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'si_LK', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'si_LK', 'LC_IDENTIFICATION': 'si_LK', 'PWD': '/home/diyazen/hashika_ws/build/game', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.8.209 49642 192.168.9.183 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/diyazen/hashika_ws/build/game/prefix_override:/home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages:/home/diyazen/hashika_ws/build/game:/home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages:/home/diyazen/upeksha_ws/build/ros2_bno055:/home/diyazen/upeksha_ws/install/ros2_bno055/lib/python3.10/site-packages:/home/diyazen/upeksha_ws/build/py_pubsub:/home/diyazen/upeksha_ws/install/py_pubsub/lib/python3.10/site-packages:/home/diyazen/upeksha_ws/build/bno055:/home/diyazen/upeksha_ws/install/bno055/lib/python3.10/site-packages:/home/diyazen/upeksha_ws/build/Adafruit_BNO055:/home/diyazen/upeksha_ws/install/Adafruit_BNO055/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'si_LK', 'LC_PAPER': 'si_LK', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/diyazen/upeksha_ws/install/bumperbot_controller'}, 'shell': False}
+[3.928777] (-) TimerEvent: {}
+[4.029544] (-) TimerEvent: {}
+[4.130260] (-) TimerEvent: {}
+[4.230936] (-) TimerEvent: {}
+[4.331572] (-) TimerEvent: {}
+[4.432243] (-) TimerEvent: {}
+[4.532855] (-) TimerEvent: {}
+[4.633465] (-) TimerEvent: {}
+[4.734105] (-) TimerEvent: {}
+[4.834720] (-) TimerEvent: {}
+[4.935389] (-) TimerEvent: {}
+[5.036031] (-) TimerEvent: {}
+[5.136717] (-) TimerEvent: {}
+[5.153139] (game) StdoutLine: {'line': b'running develop\n'}
+[5.158011] (game) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.158669] (game) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.164630] (game) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[5.165180] (game) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.236860] (-) TimerEvent: {}
+[5.263643] (game) StderrLine: {'line': b'/usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.4.1. is an invalid version and will not be supported in a future release\n'}
+[5.264198] (game) StderrLine: {'line': b'  warnings.warn(\n'}
+[5.337012] (-) TimerEvent: {}
+[5.437632] (-) TimerEvent: {}
+[5.538266] (-) TimerEvent: {}
+[5.638881] (-) TimerEvent: {}
+[5.739526] (-) TimerEvent: {}
+[5.840114] (-) TimerEvent: {}
+[5.940793] (-) TimerEvent: {}
+[6.022882] (game) StdoutLine: {'line': b'running egg_info\n'}
+[6.023642] (game) StdoutLine: {'line': b'writing game.egg-info/PKG-INFO\n'}
+[6.024855] (game) StdoutLine: {'line': b'writing dependency_links to game.egg-info/dependency_links.txt\n'}
+[6.025741] (game) StdoutLine: {'line': b'writing entry points to game.egg-info/entry_points.txt\n'}
+[6.026644] (game) StdoutLine: {'line': b'writing requirements to game.egg-info/requires.txt\n'}
+[6.027242] (game) StdoutLine: {'line': b'writing top-level names to game.egg-info/top_level.txt\n'}
+[6.035531] (game) StdoutLine: {'line': b"reading manifest file 'game.egg-info/SOURCES.txt'\n"}
+[6.040941] (-) TimerEvent: {}
+[6.042029] (game) StdoutLine: {'line': b"writing manifest file 'game.egg-info/SOURCES.txt'\n"}
+[6.049149] (game) StdoutLine: {'line': b'running build_ext\n'}
+[6.050160] (game) StdoutLine: {'line': b'Creating /home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages/game.egg-link (link to .)\n'}
+[6.054319] (game) StdoutLine: {'line': b'Installing aruco_detection script to /home/diyazen/hashika_ws/install/game/lib/game\n'}
+[6.055303] (game) StdoutLine: {'line': b'Installing movements script to /home/diyazen/hashika_ws/install/game/lib/game\n'}
+[6.056720] (game) StdoutLine: {'line': b'\n'}
+[6.057334] (game) StdoutLine: {'line': b'Installed /home/diyazen/hashika_ws/build/game\n'}
+[6.057716] (game) StdoutLine: {'line': b'running install_data\n'}
+[6.058316] (game) StdoutLine: {'line': b'copying launch/run.launch.py -> /home/diyazen/hashika_ws/install/game/share/game/launch\n'}
+[6.141298] (-) TimerEvent: {}
+[6.202131] (game) CommandEnded: {'returncode': 0}
+[6.241379] (-) TimerEvent: {}
+[6.342106] (-) TimerEvent: {}
+[6.443171] (-) TimerEvent: {}
+[6.544648] (-) TimerEvent: {}
+[6.581787] (game) JobEnded: {'identifier': 'game', 'rc': 0}
+[6.585785] (-) EventReactorShutdown: {}

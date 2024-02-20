@@ -1,0 +1,37 @@
+[0.411s] Invoking command in '/home/diyazen/hashika_ws/build/run_game': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake /home/diyazen/hashika_ws/src/run_game -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/diyazen/hashika_ws/install/run_game
+[1.518s] -- The C compiler identification is GNU 11.4.0
+[2.274s] -- The CXX compiler identification is GNU 11.4.0
+[2.326s] -- Detecting C compiler ABI info
+[2.687s] -- Detecting C compiler ABI info - done
+[2.715s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.718s] -- Detecting C compile features
+[2.721s] -- Detecting C compile features - done
+[2.737s] -- Detecting CXX compiler ABI info
+[3.095s] -- Detecting CXX compiler ABI info - done
+[3.124s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.125s] -- Detecting CXX compile features
+[3.126s] -- Detecting CXX compile features - done
+[3.216s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.218s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[4.554s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.025s] -- Found rclpy: 3.3.11 (/opt/ros/humble/share/rclpy/cmake)
+[5.220s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[5.220s]   By not providing "Findgame.cmake" in CMAKE_MODULE_PATH this project has
+[5.221s]   asked CMake to find a package configuration file provided by "game", but
+[5.221s]   CMake did not find one.
+[5.221s] 
+[5.222s]   Could not find a package configuration file provided by "game" with any of
+[5.222s]   the following names:
+[5.223s] 
+[5.223s]     gameConfig.cmake
+[5.223s]     game-config.cmake
+[5.224s] 
+[5.225s]   Add the installation prefix of "game" to CMAKE_PREFIX_PATH or set
+[5.226s]   "game_DIR" to a directory containing one of the above files.  If "game"
+[5.227s]   provides a separate development package or SDK, be sure it has been
+[5.227s]   installed.
+[5.228s] 
+[5.228s] [0m
+[5.229s] -- Configuring incomplete, errors occurred!
+[5.230s] See also "/home/diyazen/hashika_ws/build/run_game/CMakeFiles/CMakeOutput.log".
+[5.236s] Invoked command in '/home/diyazen/hashika_ws/build/run_game' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake /home/diyazen/hashika_ws/src/run_game -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/diyazen/hashika_ws/install/run_game

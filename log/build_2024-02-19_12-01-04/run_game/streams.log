@@ -1,0 +1,35 @@
+[0.408s] Invoking command in '/home/diyazen/hashika_ws/build/run_game': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake /home/diyazen/hashika_ws/src/run_game -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/diyazen/hashika_ws/install/run_game
+[0.450s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.158s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.191s] -- Found rclpy: 3.3.11 (/opt/ros/humble/share/rclpy/cmake)
+[1.222s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.781s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.786s] -- Added test 'lint_cmake' to check CMake code style
+[1.790s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.800s] -- Added test 'xmllint' to check XML markup files
+[1.815s] -- Configuring done
+[1.832s] -- Generating done
+[1.837s] -- Build files have been written to: /home/diyazen/hashika_ws/build/run_game
+[1.845s] Invoked command in '/home/diyazen/hashika_ws/build/run_game' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake /home/diyazen/hashika_ws/src/run_game -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/diyazen/hashika_ws/install/run_game
+[1.854s] Invoking command in '/home/diyazen/hashika_ws/build/run_game': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/diyazen/hashika_ws/build/run_game -- -j4 -l4
+[1.993s] Invoked command in '/home/diyazen/hashika_ws/build/run_game' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake --build /home/diyazen/hashika_ws/build/run_game -- -j4 -l4
+[2.142s] Invoking command in '/home/diyazen/hashika_ws/build/run_game': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/diyazen/hashika_ws/build/run_game
+[2.167s] -- Install configuration: ""
+[2.169s] -- Execute custom install script
+[2.171s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/launch/run.launch.py
+[2.201s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/ament_index/resource_index/package_run_dependencies/run_game
+[2.233s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/ament_index/resource_index/parent_prefix_path/run_game
+[2.265s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/environment/ament_prefix_path.sh
+[2.297s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/environment/ament_prefix_path.dsv
+[2.327s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/environment/path.sh
+[2.359s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/environment/path.dsv
+[2.390s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/local_setup.bash
+[2.425s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/local_setup.sh
+[2.456s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/local_setup.zsh
+[2.488s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/local_setup.dsv
+[2.521s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/package.dsv
+[2.554s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/ament_index/resource_index/packages/run_game
+[2.587s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/cmake/run_gameConfig.cmake
+[2.619s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/cmake/run_gameConfig-version.cmake
+[2.652s] -- Symlinking: /home/diyazen/hashika_ws/install/run_game/share/run_game/package.xml
+[2.688s] Invoked command in '/home/diyazen/hashika_ws/build/run_game' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/diyazen/hashika_ws/install/game:/home/diyazen/upeksha_ws/install/ros2_bno055:/home/diyazen/upeksha_ws/install/py_pubsub:/home/diyazen/upeksha_ws/install/bno055:/opt/ros/humble /usr/bin/cmake --install /home/diyazen/hashika_ws/build/run_game

@@ -1,0 +1,1 @@
+/home/diyazen/hashika_ws/build/run_game/ament_cmake_environment_hooks/local_setup.bash

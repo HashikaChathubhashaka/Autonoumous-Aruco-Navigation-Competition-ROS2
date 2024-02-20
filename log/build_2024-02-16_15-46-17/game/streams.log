@@ -1,0 +1,25 @@
+[3.912s] Invoking command in '/home/diyazen/hashika_ws/build/game': PYTHONPATH=/home/diyazen/hashika_ws/build/game/prefix_override:/home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/diyazen/hashika_ws/build/game/build --no-deps install_data
+[5.151s] running develop
+[5.156s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[5.157s]   warnings.warn(
+[5.163s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[5.163s]   warnings.warn(
+[5.262s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.4.1. is an invalid version and will not be supported in a future release
+[5.262s]   warnings.warn(
+[6.021s] running egg_info
+[6.022s] writing game.egg-info/PKG-INFO
+[6.023s] writing dependency_links to game.egg-info/dependency_links.txt
+[6.024s] writing entry points to game.egg-info/entry_points.txt
+[6.025s] writing requirements to game.egg-info/requires.txt
+[6.025s] writing top-level names to game.egg-info/top_level.txt
+[6.034s] reading manifest file 'game.egg-info/SOURCES.txt'
+[6.040s] writing manifest file 'game.egg-info/SOURCES.txt'
+[6.047s] running build_ext
+[6.048s] Creating /home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages/game.egg-link (link to .)
+[6.052s] Installing aruco_detection script to /home/diyazen/hashika_ws/install/game/lib/game
+[6.053s] Installing movements script to /home/diyazen/hashika_ws/install/game/lib/game
+[6.055s] 
+[6.055s] Installed /home/diyazen/hashika_ws/build/game
+[6.056s] running install_data
+[6.056s] copying launch/run.launch.py -> /home/diyazen/hashika_ws/install/game/share/game/launch
+[6.201s] Invoked command in '/home/diyazen/hashika_ws/build/game' returned '0': PYTHONPATH=/home/diyazen/hashika_ws/build/game/prefix_override:/home/diyazen/hashika_ws/install/game/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/diyazen/hashika_ws/build/game/build --no-deps install_data
