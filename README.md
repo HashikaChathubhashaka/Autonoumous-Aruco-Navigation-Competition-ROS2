@@ -35,11 +35,5 @@ ros2 run game aruco_detection
 
 
 
-
-
-## Installation
-
-Describe how to install your project. Include any dependencies that need to be installed.
-
 ```bash
 npm install my-project
