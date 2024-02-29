@@ -1,9 +1,0 @@
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/uninstall.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/run_game_uninstall.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/test.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/edit_cache.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/rebuild_cache.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/list_install_components.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/install.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/install/local.dir
-/home/diyazen/hashika_ws/build/run_game/CMakeFiles/install/strip.dir

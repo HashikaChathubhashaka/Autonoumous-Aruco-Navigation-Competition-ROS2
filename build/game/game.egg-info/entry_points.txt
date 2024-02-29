@@ -1,4 +1,0 @@
-[console_scripts]
-aruco_detection = game.aruco_detection:main
-movements = game.movements:main
-
