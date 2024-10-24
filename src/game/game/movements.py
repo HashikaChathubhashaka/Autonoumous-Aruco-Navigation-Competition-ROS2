@@ -17,27 +17,7 @@ class Movements(Node):
         
         self.address = address
         self.roboclaw = roboclaw
-        
-        #config the PID for both motors
-        p_M1 =  2.88195 #1.56562;
-        i_M1 =  0.633909 #0.29137;
-        d_M1 = 0.0;
-        qpps_M1 = 7125 #10500;
-
-        p_M2 = 2.88198 #1.53399;
-        i_M2 = 0.61106;
-        d_M2 = 0.0;
-        qpps_M2 =  6937 #10687;
     
-        self.p_M1 = p_M1
-        self.i_M1 = i_M1
-        self.d_M1 = d_M1
-        self.qpps_M1 = qpps_M1
-
-        self.p_M2 = p_M2
-        self.i_M2 = i_M2
-        self.d_M2 = d_M2
-        self.qpps_M2 = qpps_M2
 
 
         # In the start the robot always go in East Direction
