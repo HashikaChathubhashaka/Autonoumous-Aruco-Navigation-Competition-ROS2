@@ -17,19 +17,17 @@ class Movements(Node):
         
         self.address = address
         self.roboclaw = roboclaw
-        # In the start the robot always go in East Direction
-        self.current_forward_direction= "E"
-
+        
         #config the PID for both motors
-        p_M1 = 1.56562;
-        i_M1 = 0.29137;
+        p_M1 =  2.88195 #1.56562;
+        i_M1 =  0.633909 #0.29137;
         d_M1 = 0.0;
-        qpps_M1 = 10500;
+        qpps_M1 = 7125 #10500;
 
-        p_M2 = 1.53399;
-        i_M2 = 0.27342;
+        p_M2 = 2.88198 #1.53399;
+        i_M2 = 0.61106;
         d_M2 = 0.0;
-        qpps_M2 = 10687;
+        qpps_M2 =  6937 #10687;
     
         self.p_M1 = p_M1
         self.i_M1 = i_M1
@@ -42,6 +40,22 @@ class Movements(Node):
         self.qpps_M2 = qpps_M2
 
 
+        # In the start the robot always go in East Direction
+        self.current_forward_direction= "East"
+
+
+        self.directions = ["East","South_East","South","South_West","West","North_West","North","North_East"]
+        
+        self.numbering_of_directions = { "East":    (1,2,3,4,5,6,7,8)
+                                     ,"South_East":(2,3,4,5,6,7,8,1)
+                                     ,"South":     (3,4,5,6,7,8,1,2)
+                                     ,"South_West":(4,5,6,7,8,1,2,3)
+                                     ,"West":      (5,6,7,8,1,2,3,4)
+                                     ,"North_West":(6,7,8,1,2,3,4,5)
+                                     ,"North":     (7,8,1,2,3,4,5,6)
+                                     ,"North_East":(8,1,2,3,4,5,6,7) }
+        
+
 
         # subscription for taking aruco ID.
         self.subscription = self.create_subscription(
@@ -51,126 +65,270 @@ class Movements(Node):
             10
         )
 
-    #---Movement Functions-----#
-    def turn_left_90(self):
-        self.roboclaw.ResetEncoders(self.address)
-                
-                #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer                
-        self.roboclaw.SpeedDistanceM1M2(self.address,10000,13550,-10000,13550,1)
+        degree_90 = 14000
+        degree_45 = 3100
+        degree_135 = 15000
 
-    def turn_right_90(self):
-                
+        forward_before_rotation = 13000
+        forward_after_rotation =  18000
+
         self.roboclaw.ResetEncoders(self.address)
+
+        while(self.roboclaw.ReadEncM2(self.address)[1] < 34000):
+            speed_m1 = abs(self.roboclaw.ReadSpeedM1(self.address)[1])
+            speed_m2 = abs(self.roboclaw.ReadSpeedM2(self.address)[1])
+
+        # Calculate error (difference in speeds)
+            error = speed_m1 - speed_m2
+
+        # Compute PID output
+            pid_output = int(error * 0.054)
+
+            self.roboclaw.ForwardM1(self.address,abs(100 - pid_output))
+            self.roboclaw.ForwardM2(self.address,abs(100 + pid_output))
+            
+        
+        self.roboclaw.ForwardM1(self.address, 0)
+        self.roboclaw.ForwardM2(self.address, 0) 
+
+        ##########################
+
+        rotation_direction = "right"
+
+        self.roboclaw.ResetEncoders(self.address)
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,forward_before_rotation,10000,forward_before_rotation,1) 
+        while(self.roboclaw.ReadEncM2(self.address)[1] < forward_before_rotation):
+            speed_m1 = abs(self.roboclaw.ReadSpeedM1(self.address)[1])
+            speed_m2 = abs(self.roboclaw.ReadSpeedM2(self.address)[1])
+
+            error = speed_m1 - speed_m2
+
+            pid_output = int(error * 0.054)
+
+            self.roboclaw.ForwardM1(self.address,abs(100 - pid_output))
+            self.roboclaw.ForwardM2(self.address,abs(100 + pid_output))
+        
+        self.roboclaw.ForwardM1(self.address, 0)
+        self.roboclaw.ForwardM2(self.address, 0) 
+
+
+        if rotation_direction == "right":
+            self.roboclaw.ResetEncoders(self.address)        
+                    #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
+            # self.roboclaw.SpeedDistanceM1M2(self.address,-10000,rotation,10000,rotation,1) 
+            while(self.roboclaw.ReadEncM2(self.address)[1] < degree_45):
+                self.roboclaw.BackwardM1(self.address,abs(100 ))
+                self.roboclaw.ForwardM2(self.address,abs(100))
+            
+            self.roboclaw.ForwardM1(self.address, 0)
+            self.roboclaw.ForwardM2(self.address, 0) 
+
+        else:
+            self.roboclaw.ResetEncoders(self.address)        
+                    #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
+            # self.roboclaw.SpeedDistanceM1M2(self.address,10000,rotation,-10000,rotation,1)     
+            while(self.roboclaw.ReadEncM2(self.address)[1] < degree_90):
+                self.roboclaw.BackwardM2(self.address,abs(100 ))
+                self.roboclaw.ForwardM1(self.address,abs(100))
+            
+            self.roboclaw.ForwardM1(self.address, 0)
+            self.roboclaw.ForwardM2(self.address, 0)        
+
+
+
+        self.roboclaw.ResetEncoders(self.address)
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,forward_after_rotation,10000,forward_after_rotation,1) 
+        while(self.roboclaw.ReadEncM2(self.address)[1] < forward_after_rotation):
+            speed_m1 = abs(self.roboclaw.ReadSpeedM1(self.address)[1])
+            speed_m2 = abs(self.roboclaw.ReadSpeedM2(self.address)[1])
+
+            error = speed_m1 - speed_m2
+
+            pid_output = int(error * 0.054)
+
+            self.roboclaw.ForwardM1(self.address,abs(100 - pid_output))
+            self.roboclaw.ForwardM2(self.address,abs(100 + pid_output))
+            
+        self.roboclaw.ForwardM1(self.address, 0)
+        self.roboclaw.ForwardM2(self.address, 0)
+
+        
+
+        # ##----For testing Motors----
+        # print(self.roboclaw.ReadEncM1(self.address))
+        # print(self.roboclaw.ReadEncM2(self.address)) 
+
+        # self.roboclaw.ForwardM1(self.address, 100)
+        # self.roboclaw.ForwardM2(self.address, 100)
+        # sleep(15)
+
+        # print(self.roboclaw.ReadEncM1(self.address)) 
+        # print(self.roboclaw.ReadEncM2(self.address)) 
+
+        # self.roboclaw.ForwardM1(self.address, 0)
+        # self.roboclaw.ForwardM2(self.address, 0)
+
+
+        # self.roboclaw.ResetEncoders(self.address)
                 
-                #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
-        self.roboclaw.SpeedDistanceM1M2(self.address,-10000,13550,10000,13550,1)
+        #         #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,15000,10000,15000,1)
+
+        # sleep(5)
+        # # self.stop()
+
+
+        # self.roboclaw.ResetEncoders(self.address)
+                
+        #         #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,15000,10000,15000,1)
+
+        # sleep(5)
+        # self.stop()
+
+
+        # sleep(2)
+
+
+        # self.roboclaw.ResetEncoders(self.address)
+
+        #         #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,40000,8800,40000,1)
+
+    #---Basic Movement Functions-----#
+        
+    #Straight Movements
+
+    # tune parameters
+        
+
 
     def forward(self):
         self.roboclaw.ResetEncoders(self.address)
-                
+
                 #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
-        self.roboclaw.SpeedDistanceM1M2(self.address,10000,20000,10000,20000,1)
-          
-    def r_f(self):
-        sleep(2)
-        self.turn_right_90()
-        sleep(2)
-        self.forward()
-        sleep(2)
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,28000,10000,28000,1) 
+        # while (self.roboclaw.ReadEncM1(self.address)[1] < 28000  and self.roboclaw.ReadEncM2(self.address)[1] < 28000):
+        #     pass
 
-    def l_f(self):
-        sleep(2)
-        self.turn_left_90()
-        sleep(2)
-        self.forward()
-        sleep(2)
-
-    def f(self):
-        sleep(2)
-        self.forward()
-        sleep(2)
+        while(self.roboclaw.ReadEncM2(self.address)[1] < 18000):
+            self.roboclaw.ForwardM1(self.address,abs(100 ))
+            self.roboclaw.ForwardM2(self.address,abs(100))
+            
+        
+        self.roboclaw.ForwardM1(self.address, 0)
+        self.roboclaw.ForwardM2(self.address, 0) 
 
 
+
+    def movement(self,forward_before_rotation ,rotation_direction ,  rotation , forward_after_rotation):
+
+        self.roboclaw.ResetEncoders(self.address)
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,forward_before_rotation,10000,forward_before_rotation,1) 
+        while(self.roboclaw.ReadEncM2(self.address)[1] < forward_before_rotation):
+            self.roboclaw.ForwardM1(self.address,abs(100 ))
+            self.roboclaw.ForwardM2(self.address,abs(100))
+            
+        
+        self.roboclaw.ForwardM1(self.address, 0)
+        self.roboclaw.ForwardM2(self.address, 0) 
+
+        sleep(4)
+
+        if rotation_direction == "right":
+            self.roboclaw.ResetEncoders(self.address)        
+                    #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
+            # self.roboclaw.SpeedDistanceM1M2(self.address,-10000,rotation,10000,rotation,1) 
+            while(self.roboclaw.ReadEncM2(self.address)[1] < rotation):
+                self.roboclaw.BackwardM1(self.address,abs(100 ))
+                self.roboclaw.ForwardM2(self.address,abs(100))
+            
+            self.roboclaw.ForwardM1(self.address, 0)
+            self.roboclaw.ForwardM2(self.address, 0) 
+
+        else:
+            self.roboclaw.ResetEncoders(self.address)        
+                    #address, speedM1 , distanceM1 , speedM2 , distanceM2 , buffer
+            # self.roboclaw.SpeedDistanceM1M2(self.address,10000,rotation,-10000,rotation,1)     
+            while(self.roboclaw.ReadEncM2(self.address)[1] < rotation):
+                self.roboclaw.BackwardM2(self.address,abs(100 ))
+                self.roboclaw.ForwardM1(self.address,abs(100))
+            
+            self.roboclaw.ForwardM1(self.address, 0)
+            self.roboclaw.ForwardM2(self.address, 0)        
+
+        sleep(4)
+
+        self.roboclaw.ResetEncoders(self.address)
+        # self.roboclaw.SpeedDistanceM1M2(self.address,10000,forward_after_rotation,10000,forward_after_rotation,1) 
+        while(self.roboclaw.ReadEncM2(self.address)[1] < forward_after_rotation):
+                self.roboclaw.ForwardM1(self.address,abs(100 ))
+                self.roboclaw.ForwardM2(self.address,abs(100))
+            
+        self.roboclaw.ForwardM1(self.address, 0)
+        self.roboclaw.ForwardM2(self.address, 0)
+
+    def stop(self):
+        self.roboclaw.ForwardM1(self.address, 0)
+        self.roboclaw.ForwardM2(self.address, 0)   
+
+
+        
     def aruco_id_callback(self, msg):
         aruco_id = msg.data
 
+    # 1= East , 2 =South-East , 3=South ,  4=South-West , 5=West , 6=North-West , 7=North , 8=North-East , 0=Stop
 
-# 1= East , 2 =South-East , 3=South ,  4=South-West , 5=West , 6=North-West , 7=North , 8=North-East , 0=Stop
+        # ---Stop at End --- 
+        if aruco_id == 0: 
+            self.get_logger().info('Stop')
+            self.stop()
 
+        else:
+            current_set = self.numbering_of_directions[self.current_forward_direction]
 
-        if aruco_id == 0:  # Stop the robot
-            self.get_logger().info('Received ArUco ID 0: Stop ')
+            # ---forward---
+            if  aruco_id == current_set[0]:
+                self.forward()
+                self.current_forward_direction= self.directions[current_set[0]-1]
 
-            return 
+            # ---90 turns---
+            elif aruco_id == current_set[2]:
+                #self.right_90_forward()
+                self.movement(self.forward_before_rotation ,"right", self.degree_90, self.forward_after_rotation)
+                self.current_forward_direction = self.directions[current_set[2]-1]
+
+            elif aruco_id == current_set[6]:
+                #self.left_90_forward()
+                self.movement(self.forward_before_rotation ,"left", self.degree_90, self.forward_after_rotation)
+                self.current_forward_direction= self.directions[current_set[6]-1]
+            
+            # ---45 turns---   
+            elif aruco_id == current_set[1]:
+                #self.right_45_forward()
+                self.movement(self.forward_before_rotation ,"right", self.degree_45, self.forward_after_rotation)
+                self.current_forward_direction= self.directions[current_set[1]-1]
+            
+            elif aruco_id == current_set[7]:
+                #self.left_45_forward()
+                self.movement(self.forward_before_rotation ,"left", self.degree_45, self.forward_after_rotation)
+                self.current_forward_direction= self.directions[current_set[7]-1]
+            
+            # ---135 turns---
+            elif aruco_id == current_set[3]:
+                #self.right_135_forward()
+                self.movement(self.forward_before_rotation ,"right", self.degree_135, self.forward_after_rotation)
+                self.current_forward_direction= self.directions[current_set[3]-1]
+            
+            elif aruco_id == current_set[5]:
+                #self.left_135_forward()
+                self.movement(self.forward_before_rotation ,"left", self.degree_135, self.forward_after_rotation)
+                self.current_forward_direction= self.directions[current_set[5]-1]
+
+            else:
+                self.stop()
+            
         
-        if self.current_forward_direction =="E":  # current Direction --> East
-            if aruco_id == 3:
-                self.get_logger().info('Robot going in East Direction :next move - 90 right ')
-                self.r_f()
-                    
-                self.current_forward_direction= "S"
-
-            elif aruco_id == 7:
-                self.get_logger().info('Robot going in East Direction :next move - 90 left ')
-                self.l_f()
-                self.current_forward_direction= "N"
-            
-            else:
-                self.get_logger().info('Robot going in East Direction :next move - forward ')
-                #self.f()
-
-
-        elif self.current_forward_direction =="S": # current Direction --> South
-            if aruco_id == 5:
-                self.get_logger().info('Robot going in South Direction :next move - 90 right ')
-                self.r_f()
-                self.current_forward_direction= "E"
-
-
-            elif aruco_id == 1:
-                self.get_logger().info('Robot going in South Direction :next move - 90 left ')
-                self.l_f()
-                self.current_forward_direction= "W"
-            
-            else:
-                self.get_logger().info('Robot going in South Direction :next move - forward ')
-                #self.f()
-
-
-
-        elif self.current_forward_direction =="W": # current Direction --> West
-            if aruco_id == 7:
-                self.get_logger().info('Robot going in West Direction :next move - 90 right ')
-                self.current_forward_direction= "N"
-
-            elif aruco_id == 3:
-                self.get_logger().info('Robot going in West Direction :next move - 90 left ')
-                self.l_f()
-                self.current_forward_direction= "S"
-            
-            else:
-                self.get_logger().info('Robot going in West Direction :next move - forward ')
-                #self.f()
-
-
-        elif self.current_forward_direction =="N": # current Direction --> North
-            if aruco_id == 1:
-                self.get_logger().info('Robot going in North Direction :next move - 90 right ')
-                self.r_f()
-                self.current_forward_direction= "E"
-
-            elif aruco_id == 5:
-                self.get_logger().info('Robot going in North Direction :next move - 90 left ')
-                self.l_f()
-                self.current_forward_direction= "W"
-            
-            else:
-                self.get_logger().info('Robot going in North Direction :next move - forward ')
-                #self.f()
-
-
-
-
 def main(args=None):
     rclpy.init(args=args)
     aruco_id_subscriber = Movements()

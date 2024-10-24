@@ -52,14 +52,14 @@ class Detector(Node):
             # Publish the frame with detected markers
             self.publisher.publish(self.br.cv2_to_imgmsg(frame_with_markers))
 
-        self.get_logger().info('Publishing video frame with detected markers')
+        #self.get_logger().info('Publishing video frame with detected markers')
 
     def img_callback(self, data):
         self.get_logger().info('Receiving video frame')
-        current_frame = self.br.imgmsg_to_cv2(data)
-        cv2.imshow("camera", current_frame)
-        cv2.waitKey(1)
-
+        # current_frame = self.br.imgmsg_to_cv2(data)
+        # cv2.imshow("camera", current_frame)
+        # cv2.waitKey(1)
+        
 
 
 def aruco_display(corners, ids, rejected, image):
