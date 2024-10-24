@@ -1,21 +1,41 @@
 # Autonoumous-Aruco-Navigation-Competition-ROS2
 
-Autonoumous Navigation Competition using Aruco Mark build with ROS2 humble.
 
-## Table of Contents
+<div align="center">
+  <img src="https://github.com/HashikaChathubhashaka/Autonoumous-Aruco-Navigation-Competition-ROS2/blob/main/Images%20of%20Robot/1.jpeg?raw=true" alt="Robot Image" height="300" width="500"/>
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Code Example](#code-example)
-- [Contributing](#contributing)
-- [License](#license)
+  <h2> Autonoumous Navigation Robot using Aruco Marks </h2>
+</div>
 
+
+
+
+
+
+## Important
+<p>To run the aruco detection node you need to install opencv-contrib-python 4.6.0.66
+
+If already have other version
+```bash
+pip uninstall opencv-contrib-python opencv-python
+```
+Install required version
+```bash
+pip install opencv-contrib-python==4.6.0.66
+```
+
+</p>
 
 ## Installation
-<p>Inside the src file , game package(Python Package) is included. 
-Download it to your workspace and build it .
-Then run it. 
-</p>
+Clone the src file into your local directory and make ros2 package using colcon build.
+
+```bash
+colcon build --symlink-install 
+```
+
+
+  
+
 
 source the workspace
 ```bash
@@ -33,7 +53,10 @@ To run only aruco marker detector
 ros2 run game aruco_detection
 ```
 
-
+To run only movement ( uncomment testing lines)
 
 ```bash
-npm install my-project
+ros2 run game movements
+```
+
+
