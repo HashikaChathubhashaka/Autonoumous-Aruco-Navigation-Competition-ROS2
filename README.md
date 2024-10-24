@@ -27,7 +27,7 @@ pip install opencv-contrib-python==4.6.0.66
 </p>
 
 ## Installation
-Clone the src file into your local directory and make ros2 package using colcon build.
+Clone the src/game file into your local directory and make ros2 package using colcon build.
 
 ```bash
 colcon build --symlink-install 
