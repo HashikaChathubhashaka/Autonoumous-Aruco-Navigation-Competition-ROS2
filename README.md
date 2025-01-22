@@ -3,7 +3,7 @@
 
 <div >
   <img src="https://github.com/HashikaChathubhashaka/Autonoumous-Aruco-Navigation-Competition-ROS2/blob/main/Images%20of%20Robot/1.jpeg?raw=true" alt="Robot Image" height="200" width="300"/>
-  <img src="https://github.com/HashikaChathubhashaka/Autonoumous-Aruco-Navigation-Competition-ROS2/blob/main/Images%20of%20Robot/3.jpg" alt="Competition Image1" height="200" width="300"/>
+  <img src="https://github.com/HashikaChathubhashaka/Autonoumous-Aruco-Navigation-Competition-ROS2/blob/main/Images%20of%20Robot/3.jpg" alt="Competition Image1" height="200" width="350"/>
 <img src="https://github.com/HashikaChathubhashaka/Autonoumous-Aruco-Navigation-Competition-ROS2/blob/main/Images%20of%20Robot/4.jpg" alt="Competition Image2" height="200" width="260"/>
 </div>
 
